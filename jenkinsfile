@@ -1,0 +1,18 @@
+pipeline {
+
+    agent any
+
+
+    stages {
+
+
+       stage ('Pull') {
+            steps {
+               checkout([$class: 'GitSCM','branches: [[name: '*/master']],
+                userRemoteConfigs: [[ 
+                    credentialsId: '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',
+                    url: 'https://github.com/souhesou/my-app.git']]])
+}
+
+            }
+        }
