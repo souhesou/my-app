@@ -8,6 +8,7 @@ pipeline {
 
        stage ('Pull') {
             steps {
+               script {
                checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                 userRemoteConfigs: [[ 
                     credentialsId: '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',
@@ -16,3 +17,5 @@ pipeline {
 
             }
         }
+ }
+}
