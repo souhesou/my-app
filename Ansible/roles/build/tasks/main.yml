@@ -4,4 +4,6 @@
 #buildproject
 
                 - name: build app
-                  shell: ng build --prod 
+                  shell: ng build --prod
+                  environment:
+                   PATH: /home/souha/my-app/node_modules/.bin/
