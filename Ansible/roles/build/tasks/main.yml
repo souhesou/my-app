@@ -6,4 +6,4 @@
                 - name: build app
                   shell: ng build --prod
                   environment:
-                   PATH: /home/souha/my-app/node_modules/.bin/
+                   PATH: /root/.nvm/versions/node/v12.22.7/bin
