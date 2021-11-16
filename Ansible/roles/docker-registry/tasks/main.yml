@@ -1,2 +1,8 @@
 ---
 # tasks file for docker-registry
+- name: Tag and push to docker hub
+  docker_image:
+    name: souhe14/cdapp:devops
+    repository: souhe14/cdapp
+    tag: devops
+    push: yes
