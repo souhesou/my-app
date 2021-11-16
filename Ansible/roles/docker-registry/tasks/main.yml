@@ -1,5 +1,11 @@
 ---
 # tasks file for docker-registry
+
+- name: Log into DockerHub
+  docker_login:
+    username: souhe14
+    password: 5d46a1f2-11a3-47b1-805b-772d5737a987
+
 - name: Tag and push to docker hub
   docker_image:
     name: souhe14/cdapp:devops
