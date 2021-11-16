@@ -1,17 +1,18 @@
 ---
+# tasks file for docker
 - name: create image docker
   docker_image:
-    name: CDLab1
+    name: devops
     build:
      path: /var/lib/jenkins/workspace/CDLab1
      pull: no
-    source: build
+    source: build 
     state: present
     force_source: true
-- name: run container docker
+- name: docker container
   docker_container:
-    name: myapp_container
-    image: CDLab1:latest
+    name: my_app
+    image: devops:latest
     state: started
     recreate: true
     ports:
